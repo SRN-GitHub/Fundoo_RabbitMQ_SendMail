@@ -33,7 +33,7 @@ export const getMessage = async () => {
         }
 
         if (!emailDetails.to || !emailDetails.subject || !emailDetails.text) {
-          console.error('Missing required email fields:', emailDetails);
+          console.error('Missing email fields:', emailDetails);
           channel.nack(msg, false, false);
           return;
         }
